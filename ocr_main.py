@@ -12,9 +12,9 @@ def main():
 
     preprocess = False
     temp = input(
-        "Do you want to pre-process the image ?\nThreshold : 1\nGrey : 2\nNone : \nEnter your choice : ").strip()
+        "Do you want to pre-process the image ?\nThreshold : 1\nGrey : 2\nNone : 0\nEnter your choice : ").strip()
 
-    # If user enter 1, Process Threshold
+    # If user enter 1, Process Threshold. Else if user enters 2, Process Median Blur. Else, do nothing
     if temp == "1":
         gray = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)[1]
     elif temp == "2":
@@ -27,7 +27,7 @@ def main():
     # load the image as a PIL/Pillow image, apply OCR, and then delete the temporary file
     text = pytesseract.image_to_string(Image.open(filename))
 
-    print(text)
+    print("OCR Text is " + text)
 
 
 try:
