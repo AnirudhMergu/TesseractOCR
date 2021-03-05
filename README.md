@@ -2,6 +2,6 @@
 
 Sample project to demonstrate Tesseract OCR
 
-The written version of the tutorial is found at : https://go.anirudhmergu.com/optical-character-70b95
+The written version of the tutorial is found at : https://anirudhmergu.com/python-tesseract-ocr-sample/
 
 &copy; 2018. Anirudh Sai Mergu.
